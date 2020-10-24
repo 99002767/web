@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Page</title>
+    <script src="./common.js"></script>
+    <style>
+        body{
+            text-align: center;
+            background-color:cornsilk;
+            font-style: italic;
+
+        }
+        h1{
+            color:chartreuse;
+        }
+        select{
+            font-size: 100%;
+            color:black
+        }
+        option{
+            font-size: larger;
+        }
+
+    </style>
+
+    <script>
+        let store=[0,1,2];
+       let ddfunc=()=>{
+            var a = $("myList").value;
+            if(a== store[0])
+            {
+                var Laptops = ['Hp','dell'];
+                $("printlist").innerHTML = Laptops.join("<br>");
+            }
+ 
+             if(a == store[1])
+            {
+                var Mobiles = ['redmi','oneplus','apple'];
+                $("printlist").innerHTML = Mobiles.join("<br>");
+            }
+ 
+             else if(a == store[2])
+            {
+                var TVs = ['lg','samsung'];
+                $("printlist").innerHTML = TVs.join("<br>");
+            }
+        }
+ 
+    </script>
+</head>
+<body>
+    <h1>Array program to print desired output</h1>
+    <select id="myList" onchange="ddfunc()">
+        <option>Select the category</option>
+        <option value="0">Laptop</option>
+        <option value="1">Mobile</option>
+        <option value="2">TV</option>
+      </select> 
+      <p id="printlist"></p>
+</body>
+</html>
